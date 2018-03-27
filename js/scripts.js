@@ -12,9 +12,15 @@ $(document).ready(function(){
       newsort.push(sort.toUpperCase());
     });
     event.preventDefault();
-    newsort.forEach(function(sort){
-      $("#shopper").append("<li>" + sort + "</li>");
-    });
+    for (var index = 0; index < newsort.length; index++) {
+      $("#shopper").append("<li>" + newsort[index] + "</li>");
+    }
+
+
+
+    // newsort.forEach(function(sort){
+
+    // });
     $("form").hide();
     $("ul").show();
   });
